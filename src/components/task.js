@@ -13,6 +13,7 @@ export function Task({id, status, description}) {
   return(
     <div className="d-flex">
       <input type="checkbox" checked={status} onChange={handleCompleteClick} />
+      <span className="p-2 mb-0 ms-1 flex-grow-0">{status?"Done":"Ongoing"}</span>
       <p className="p-2 mb-0 ms-2 flex-grow-1">{description}</p>
       <button type="button" className="btn ms-2 flex-grow-0" onClick={handleDeleteClick}>Delete</button>
     </div>
